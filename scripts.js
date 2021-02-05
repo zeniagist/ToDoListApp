@@ -35,3 +35,11 @@ function newItem(){
 
 // Add-ons
 }
+
+// enter key adds to list
+$('#input').keypress(function(e) {
+  if (e.keyCode == '13') {
+    e.preventDefault();
+    newItem();
+  }
+});
