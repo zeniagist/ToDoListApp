@@ -13,7 +13,7 @@ function newItem(){
     $('#list').append(li);
   }
 
-  //clear input 
+  //clear input once add button is clicked
   $("input").val("");
 
 //2. Crossing out an item from the list of items:
@@ -25,16 +25,13 @@ function newItem(){
       li.toggleClass("strike");
     });
 
-//3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
-  let crossOutButton = $('<crossOutButton></crossOutButton>');
-  crossOutButton.append(document.createTextNode('X'));
+//3(ii). Hide list item 
+  let crossOutButton = $('<crossOutButton>X</crossOutButton>');
   li.append(crossOutButton);
 
-  crossOutButton.on("click", deleteList);
-  function deleteList(){
-    li.addClass("delete")
-  }
+  crossOutButton.on("click", function(){ li.hide(); });
 // 4. Reordering the items: 
   $('#list').sortable();
 
+// Add-ons
 }
