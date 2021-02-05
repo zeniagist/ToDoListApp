@@ -14,7 +14,7 @@ function newItem(){
   }
 
   //clear input once add button is clicked
-  $("input").val("");
+  $("input").val('');
 
 //2. Crossing out an item from the list of items:
   function crossOut() {
@@ -33,7 +33,6 @@ function newItem(){
 // 4. Reordering the items: 
   $('#list').sortable();
 
-// Add-ons
 }
 
 // enter key adds to list
